@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class CalculatorGUI
+{
+    public static void main(String[] args) {
+        while(true)
+        {
+            System.out.println("\t\t\t\tCALCULATOR");
+            System.out.println("1.Addition\t2.Subtraction\t3.Multiplication\t4.Division\t5.Exit");
+            Scanner sc = new Scanner(System.in);
+            int ch = sc.nextInt();
+            System.out.println("Enter 2 operands");
+            int n1 = sc.nextInt();
+            int n2 = sc.nextInt();
+            int res = 0;
+            switch(ch)
+            {
+                case 1:
+                    res = n1+n2;
+                    System.out.println(n1+" + "+n2+" = "+res);
+                    break;
+                case 2:
+                    res = n1-n2;
+                    System.out.println(n1+" - "+n2+" = "+res);
+                    break;
+                case 3:
+                    res = n1*n2;
+                    System.out.println(n1+" * "+n2+" = "+res);
+                    break;
+                case 4:
+                    res = n1/n2;
+                    System.out.println(n1+" / "+n2+" = "+res);
+                    break;
+                case 5:
+                    System.out.println("Exiting calculator");
+                    System.exit(0);
+                default:
+                    System.out.println("Invalid Choice");
+                    break;
+            }
+        }
+    }
+}
